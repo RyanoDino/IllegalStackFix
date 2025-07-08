@@ -80,7 +80,7 @@ public class BadPotionCheck {
 			 if(IllegalStack.isPaperServer()) 
                  try {
 				     potion = (PotionMeta) tp.getPotionMeta();
-                 } catche {
+                 } catch {
                      potion = (PotionMeta) tp.getItem().getItemMeta(); 
                  }
 			  else 
