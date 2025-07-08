@@ -77,14 +77,15 @@ public class BadPotionCheck {
 	            
 			 PotionMeta potion = null;
 			 
-			 if(IllegalStack.isPaperServer()) 
+			 if(IllegalStack.isPaperServer()) {
                  try {
-				     potion = (PotionMeta) tp.getPotionMeta();
-                 } catch {
-                     potion = (PotionMeta) tp.getItem().getItemMeta(); 
+                     potion = (PotionMeta) tp.getPotionMeta();
+                 } catch(Exception e) {
+                     potion = (PotionMeta) tp.getItem().getItemMeta();
                  }
-			  else 
-				  potion = (PotionMeta) tp.getItem().getItemMeta();
+             } else {
+                 potion = (PotionMeta) tp.getItem().getItemMeta();
+             }
 			 
 	         PotionData pd = potion.getBasePotionData();
 	         
